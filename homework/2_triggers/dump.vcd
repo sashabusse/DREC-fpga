@@ -1,0 +1,93 @@
+$date
+	Thu Sep 23 01:14:56 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module dff_tb $end
+$var wire 1 ! q $end
+$var wire 1 " nq $end
+$var reg 1 # d $end
+$var reg 1 $ e $end
+$scope module dff_inst $end
+$var wire 1 # d_i $end
+$var wire 1 $ e_i $end
+$var wire 1 ! q_o $end
+$var wire 1 " nq_o $end
+$scope module d1 $end
+$var wire 1 # d_i $end
+$var wire 1 % e_i $end
+$var wire 1 & q_o $end
+$var wire 1 ' nq_o $end
+$scope module sr $end
+$var wire 1 ' nq_o $end
+$var wire 1 & q_o $end
+$var wire 1 ( r_i $end
+$var wire 1 ) s_i $end
+$upscope $end
+$upscope $end
+$scope module d2 $end
+$var wire 1 & d_i $end
+$var wire 1 $ e_i $end
+$var wire 1 ! q_o $end
+$var wire 1 " nq_o $end
+$scope module sr $end
+$var wire 1 " nq_o $end
+$var wire 1 ! q_o $end
+$var wire 1 * r_i $end
+$var wire 1 + s_i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope task test_dff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0+
+0*
+1)
+0(
+0'
+1&
+1%
+0$
+1#
+x"
+x!
+$end
+#100
+1!
+0"
+0)
+0%
+1+
+1$
+#200
+1)
+1%
+0+
+0$
+#300
+1'
+0&
+1(
+0)
+0#
+#400
+1"
+0!
+0(
+0%
+1*
+1$
+#500
+1(
+1%
+0*
+0$
+#600

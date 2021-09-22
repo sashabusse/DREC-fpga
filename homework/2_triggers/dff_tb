@@ -1,0 +1,126 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 11;
+:vpi_module "D:\dev_tools\FPGA\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\dev_tools\FPGA\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\dev_tools\FPGA\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\dev_tools\FPGA\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\dev_tools\FPGA\iverilog\lib\ivl\va_math.vpi";
+S_0000014960a0cf80 .scope module, "dff_tb" "dff_tb" 2 3;
+ .timescale -9 -11;
+v000001496093ccb0_0 .var "d", 0 0;
+v000001496093d2f0_0 .var "e", 0 0;
+v000001496093bef0_0 .net "nq", 0 0, L_00000149608dbf50;  1 drivers
+v000001496093d390_0 .net "q", 0 0, L_00000149608dbe70;  1 drivers
+S_0000014960a0d110 .scope module, "dff_inst" "dff" 2 10, 3 3 0, S_0000014960a0cf80;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "d_i";
+    .port_info 1 /INPUT 1 "e_i";
+    .port_info 2 /OUTPUT 1 "q_o";
+    .port_info 3 /OUTPUT 1 "nq_o";
+L_00000149608dbcb0 .functor NOT 1, v000001496093d2f0_0, C4<0>, C4<0>, C4<0>;
+v00000149608daae0_0 .net "d_i", 0 0, v000001496093ccb0_0;  1 drivers
+v00000149608dab80_0 .net "e_i", 0 0, v000001496093d2f0_0;  1 drivers
+v000001496093d1b0_0 .net "nq_o", 0 0, L_00000149608dbf50;  alias, 1 drivers
+v000001496093ba90_0 .net "q_o", 0 0, L_00000149608dbe70;  alias, 1 drivers
+S_00000149608e6fd0 .scope module, "d1" "d_latch" 3 10, 4 3 0, S_0000014960a0d110;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "d_i";
+    .port_info 1 /INPUT 1 "e_i";
+    .port_info 2 /OUTPUT 1 "q_o";
+    .port_info 3 /OUTPUT 1 "nq_o";
+L_00000149608dbd90 .functor NOT 1, v000001496093ccb0_0, C4<0>, C4<0>, C4<0>;
+L_00000149608dbe00 .functor AND 1, L_00000149608dbd90, L_00000149608dbcb0, C4<1>, C4<1>;
+L_00000149608dc030 .functor AND 1, v000001496093ccb0_0, L_00000149608dbcb0, C4<1>, C4<1>;
+v00000149608db120_0 .net *"_ivl_0", 0 0, L_00000149608dbd90;  1 drivers
+v00000149608dae00_0 .net "d_i", 0 0, v000001496093ccb0_0;  alias, 1 drivers
+v00000149608db080_0 .net "e_i", 0 0, L_00000149608dbcb0;  1 drivers
+v00000149608db260_0 .net "nq_o", 0 0, L_00000149608dc180;  1 drivers
+v00000149608daea0_0 .net "q_o", 0 0, L_00000149608dbd20;  1 drivers
+S_00000149608e7160 .scope module, "sr" "sr_latch" 4 10, 5 3 0, S_00000149608e6fd0;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "r_i";
+    .port_info 1 /INPUT 1 "s_i";
+    .port_info 2 /OUTPUT 1 "q_o";
+    .port_info 3 /OUTPUT 1 "nq_o";
+L_00000149608dc0a0 .functor OR 1, L_00000149608dc180, L_00000149608dbe00, C4<0>, C4<0>;
+L_00000149608dbd20 .functor NOT 1, L_00000149608dc0a0, C4<0>, C4<0>, C4<0>;
+L_00000149608dbc40 .functor OR 1, L_00000149608dbd20, L_00000149608dc030, C4<0>, C4<0>;
+L_00000149608dc180 .functor NOT 1, L_00000149608dbc40, C4<0>, C4<0>, C4<0>;
+v00000149608db1c0_0 .net *"_ivl_0", 0 0, L_00000149608dc0a0;  1 drivers
+v00000149608daf40_0 .net *"_ivl_4", 0 0, L_00000149608dbc40;  1 drivers
+v00000149608dac20_0 .net "nq_o", 0 0, L_00000149608dc180;  alias, 1 drivers
+v00000149608dafe0_0 .net "q_o", 0 0, L_00000149608dbd20;  alias, 1 drivers
+v00000149608db9e0_0 .net "r_i", 0 0, L_00000149608dbe00;  1 drivers
+v00000149608dad60_0 .net "s_i", 0 0, L_00000149608dc030;  1 drivers
+S_00000149608e72f0 .scope module, "d2" "d_latch" 3 17, 4 3 0, S_0000014960a0d110;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "d_i";
+    .port_info 1 /INPUT 1 "e_i";
+    .port_info 2 /OUTPUT 1 "q_o";
+    .port_info 3 /OUTPUT 1 "nq_o";
+L_00000149608dc110 .functor NOT 1, L_00000149608dbd20, C4<0>, C4<0>, C4<0>;
+L_00000149608dbb60 .functor AND 1, L_00000149608dc110, v000001496093d2f0_0, C4<1>, C4<1>;
+L_00000149608dbbd0 .functor AND 1, L_00000149608dbd20, v000001496093d2f0_0, C4<1>, C4<1>;
+v00000149608db620_0 .net *"_ivl_0", 0 0, L_00000149608dc110;  1 drivers
+v00000149608db800_0 .net "d_i", 0 0, L_00000149608dbd20;  alias, 1 drivers
+v00000149608db6c0_0 .net "e_i", 0 0, v000001496093d2f0_0;  alias, 1 drivers
+v00000149608db8a0_0 .net "nq_o", 0 0, L_00000149608dbf50;  alias, 1 drivers
+v00000149608db940_0 .net "q_o", 0 0, L_00000149608dbe70;  alias, 1 drivers
+S_00000149608b2510 .scope module, "sr" "sr_latch" 4 10, 5 3 0, S_00000149608e72f0;
+ .timescale -9 -11;
+    .port_info 0 /INPUT 1 "r_i";
+    .port_info 1 /INPUT 1 "s_i";
+    .port_info 2 /OUTPUT 1 "q_o";
+    .port_info 3 /OUTPUT 1 "nq_o";
+L_00000149608dbaf0 .functor OR 1, L_00000149608dbf50, L_00000149608dbb60, C4<0>, C4<0>;
+L_00000149608dbe70 .functor NOT 1, L_00000149608dbaf0, C4<0>, C4<0>, C4<0>;
+L_00000149608dbee0 .functor OR 1, L_00000149608dbe70, L_00000149608dbbd0, C4<0>, C4<0>;
+L_00000149608dbf50 .functor NOT 1, L_00000149608dbee0, C4<0>, C4<0>, C4<0>;
+v00000149608dacc0_0 .net *"_ivl_0", 0 0, L_00000149608dbaf0;  1 drivers
+v00000149608db760_0 .net *"_ivl_4", 0 0, L_00000149608dbee0;  1 drivers
+v00000149608db300_0 .net "nq_o", 0 0, L_00000149608dbf50;  alias, 1 drivers
+v00000149608db440_0 .net "q_o", 0 0, L_00000149608dbe70;  alias, 1 drivers
+v00000149608db4e0_0 .net "r_i", 0 0, L_00000149608dbb60;  1 drivers
+v00000149608db580_0 .net "s_i", 0 0, L_00000149608dbbd0;  1 drivers
+S_00000149608b26a0 .scope task, "test_dff" "test_dff" 2 44, 2 44 0, S_0000014960a0cf80;
+ .timescale -9 -11;
+TD_dff_tb.test_dff ;
+    %end;
+    .scope S_0000014960a0cf80;
+T_1 ;
+    %vpi_call 2 20 "$dumpvars" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001496093d2f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001496093ccb0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001496093d2f0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001496093d2f0_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 29 "$display", v000001496093d390_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001496093ccb0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001496093d2f0_0, 0, 1;
+    %delay 100, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001496093d2f0_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 38 "$display", v000001496093d390_0 {0 0 0};
+    %vpi_call 2 40 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "dff_tb.v";
+    "dff.v";
+    "d_latch.v";
+    "sr_latch.v";
