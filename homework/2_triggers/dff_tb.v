@@ -2,53 +2,51 @@
 
 module dff_tb;
 
+realtime period = 10;
+
 reg d;
-reg e;
+reg clk;
 wire q;
 wire nq;
 
 dff dff_inst(
 	.d_i(d),
-	.e_i(e),
+	.e_i(clk),
 	.q_o(q),
 	.nq_o(nq)
 );
 
+// variable initalization
+initial begin
+	d <= 1'b0;
+	clk <= 1'b0;
+end
 
+// clk generation
+always #(period/2) clk <= ~clk;
+
+// test dff here
 initial
     begin
 		$dumpvars;
 		
-		e = 1'b0;
-		d = 1'b1;
-		#(1);
-		e = 1'b1;
-		#(1)
-		e = 1'b0;
-		#(1);
-		$display(q);
-		
-		
-		d = 1'b0;
-		#(1);
-		e = 1'b1;
-		#(1)
-		e = 1'b0;
-		#(1);
-		$display(q);
+		write_dff(1'b1);
+		write_dff(1'b0);
+		write_dff(1'b1);
+		write_dff(1'b0);
+		write_dff(1'b1);
+		write_dff(1'b0);
+		write_dff(1'b1);
 		
         $finish ;
 	end
 
-
-task test_dff();
-	
-	
-	
+// simple task to write d value on negedge of clk
+task write_dff(input val);
 	begin
+		@(negedge clk);
+		d = val;
 	end
-	
-
 endtask
 
 

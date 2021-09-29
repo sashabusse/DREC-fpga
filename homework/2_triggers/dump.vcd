@@ -1,5 +1,5 @@
 $date
-	Thu Sep 23 01:14:56 2021
+	Thu Sep 30 00:10:55 2021
 $end
 $version
 	Icarus Verilog
@@ -10,84 +10,152 @@ $end
 $scope module dff_tb $end
 $var wire 1 ! q $end
 $var wire 1 " nq $end
-$var reg 1 # d $end
-$var reg 1 $ e $end
+$var reg 1 # clk $end
+$var reg 1 $ d $end
+$var real 1 % period $end
 $scope module dff_inst $end
-$var wire 1 # d_i $end
-$var wire 1 $ e_i $end
+$var wire 1 $ d_i $end
+$var wire 1 # e_i $end
 $var wire 1 ! q_o $end
 $var wire 1 " nq_o $end
 $scope module d1 $end
-$var wire 1 # d_i $end
-$var wire 1 % e_i $end
-$var wire 1 & q_o $end
-$var wire 1 ' nq_o $end
+$var wire 1 $ d_i $end
+$var wire 1 & e_i $end
+$var wire 1 ' q_o $end
+$var wire 1 ( nq_o $end
 $scope module sr $end
-$var wire 1 ' nq_o $end
-$var wire 1 & q_o $end
-$var wire 1 ( r_i $end
-$var wire 1 ) s_i $end
+$var wire 1 ( nq_o $end
+$var wire 1 ' q_o $end
+$var wire 1 ) r_i $end
+$var wire 1 * s_i $end
 $upscope $end
 $upscope $end
 $scope module d2 $end
-$var wire 1 & d_i $end
-$var wire 1 $ e_i $end
+$var wire 1 ' d_i $end
+$var wire 1 # e_i $end
 $var wire 1 ! q_o $end
 $var wire 1 " nq_o $end
 $scope module sr $end
 $var wire 1 " nq_o $end
 $var wire 1 ! q_o $end
-$var wire 1 * r_i $end
-$var wire 1 + s_i $end
+$var wire 1 + r_i $end
+$var wire 1 , s_i $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope task test_dff $end
+$scope task write_dff $end
+$var reg 1 - val $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
+0-
+0,
 0+
-0*
-1)
+1*
+0)
 0(
-0'
+1'
 1&
-1%
-0$
-1#
+r10 %
+1$
+0#
 x"
 x!
 $end
-#100
+#500
 1!
 0"
-0)
-0%
-1+
-1$
-#200
-1)
-1%
-0+
-0$
-#300
-1'
+0*
 0&
+1,
+1#
+#1000
 1(
-0)
+0'
+1)
+1&
+0,
+1-
+0$
 0#
-#400
+#1500
 1"
 0!
+0)
+0&
+1+
+1#
+#2000
+1'
 0(
-0%
 1*
+1&
+0+
+0-
 1$
-#500
-1(
-1%
+0#
+#2500
+1!
+0"
 0*
+0&
+1,
+1#
+#3000
+1(
+0'
+1)
+1&
+0,
+1-
 0$
-#600
+0#
+#3500
+1"
+0!
+0)
+0&
+1+
+1#
+#4000
+1'
+0(
+1*
+1&
+0+
+0-
+1$
+0#
+#4500
+1!
+0"
+0*
+0&
+1,
+1#
+#5000
+1(
+0'
+1)
+1&
+0,
+1-
+0$
+0#
+#5500
+1"
+0!
+0)
+0&
+1+
+1#
+#6000
+1'
+0(
+1*
+1&
+0+
+1$
+0#
