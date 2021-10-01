@@ -1,0 +1,153 @@
+# Compile of seven_seg.v failed with 4 errors.
+# Compile of spi_master.v was successful.
+# Compile of spi_master_tb.sv was successful.
+# Compile of top.v was successful.
+# 4 compiles, 1 failed with 4 errors.
+vsim -gui work.spi_master_tb
+# vsim -gui work.spi_master_tb 
+# Start time: 15:16:12 on Oct 01,2021
+# Loading sv_std.std
+# Loading work.spi_master_tb
+# Loading work.spi_master
+add wave -position end  sim:/spi_master_tb/clk
+add wave -position end  sim:/spi_master_tb/spi_data
+add wave -position end  sim:/spi_master_tb/spi_wr
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_rdy
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_CLK
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_MOSI
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv(36)
+#    Time: 1020 ns  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv line 36
+# Can't move the Now cursor.
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/tx_bits_done
+restart -f -nowave
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv(36)
+#    Time: 1020 ns  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv line 36
+restart -f
+add wave -position end  sim:/spi_master_tb/clk
+add wave -position end  sim:/spi_master_tb/spi_data
+add wave -position end  sim:/spi_master_tb/spi_wr
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_rdy
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_CLK
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_MOSI
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/tx_bits_done
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/clk_cnt
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv(36)
+#    Time: 1020 ns  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv line 36
+# Compile of spi_master.v failed with 1 errors.
+# Compile of spi_master.v was successful.
+restart -f -nolist -nowave
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.spi_master
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv(36)
+#    Time: 1020 ns  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv line 36
+restart -f
+add wave -position end  sim:/spi_master_tb/clk
+add wave -position end  sim:/spi_master_tb/spi_data
+add wave -position end  sim:/spi_master_tb/spi_wr
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_rdy
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_CLK
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/o_MOSI
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/r_rdy
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/r_tx_data
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/tx_bits_done
+add wave -position end  sim:/spi_master_tb/spi_mast_inst/clk_cnt
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv(36)
+#    Time: 1020 ns  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv line 36
+# Compile of seven_seg.v failed with 4 errors.
+# Compile of spi_master.v was successful.
+# Compile of spi_master_tb.sv was successful.
+# Compile of top.v was successful.
+# 4 compiles, 1 failed with 4 errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.spi_master_tb
+# Loading work.spi_master
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv(37)
+#    Time: 1180 ns  Iteration: 0  Instance: /spi_master_tb
+# Break in Module spi_master_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master_tb.sv line 37
+# Compile of seven_seg.v failed with 4 errors.
+# Compile of spi_master.v was successful.
+# Compile of spi_master_tb.sv was successful.
+# Compile of top.v was successful.
+# Compile of spi_slave.v failed with 2 errors.
+# Compile of spi_transmission_tb.sv was successful.
+# 6 compiles, 2 failed with 6 errors.
+# Compile of seven_seg.v failed with 4 errors.
+# Compile of spi_master.v was successful.
+# Compile of spi_master_tb.sv was successful.
+# Compile of top.v was successful.
+# Compile of spi_slave.v was successful.
+# Compile of spi_transmission_tb.sv was successful.
+# 6 compiles, 1 failed with 4 errors.
+# Load canceled
+quit -sim
+# End time: 19:14:11 on Oct 01,2021, Elapsed time: 3:57:59
+# Errors: 0, Warnings: 5
+vsim -gui work.spi_transmission_tb
+# vsim -gui work.spi_transmission_tb 
+# Start time: 19:14:20 on Oct 01,2021
+# Loading sv_std.std
+# Loading work.spi_transmission_tb
+# Loading work.spi_master
+# Loading work.spi_slave
+add wave -position end  sim:/spi_transmission_tb/clk
+add wave -position end  sim:/spi_transmission_tb/spi_tx_data
+add wave -position end  sim:/spi_transmission_tb/spi_tx_wr
+add wave -position end  sim:/spi_transmission_tb/spi_rx_en
+add wave -position end  sim:/spi_transmission_tb/master/o_rdy
+add wave -position end  sim:/spi_transmission_tb/master/o_CLK
+add wave -position end  sim:/spi_transmission_tb/master/o_MOSI
+add wave -position end  sim:/spi_transmission_tb/slave/o_data
+add wave -position end  sim:/spi_transmission_tb/slave/i_r_en
+add wave -position end  sim:/spi_transmission_tb/slave/o_rdy
+add wave -position end  sim:/spi_transmission_tb/slave/r_rx_data_shift
+add wave -position end  sim:/spi_transmission_tb/slave/r_rx_data
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv(62)
+#    Time: 280 ns  Iteration: 0  Instance: /spi_transmission_tb
+# Break in Module spi_transmission_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv line 62
+# Compile of spi_transmission_tb.sv was successful.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.spi_transmission_tb
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv(62)
+#    Time: 1180 ns  Iteration: 0  Instance: /spi_transmission_tb
+# Break in Module spi_transmission_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv line 62
+# Compile of seven_seg.v failed with 4 errors.
+# Compile of spi_master.v was successful.
+# Compile of spi_master_tb.sv was successful.
+# Compile of top.v was successful.
+# Compile of spi_slave.v was successful.
+# Compile of spi_transmission_tb.sv was successful.
+# 6 compiles, 1 failed with 4 errors.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.spi_transmission_tb
+# Loading work.spi_master
+# Loading work.spi_slave
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv(62)
+#    Time: 1180 ns  Iteration: 0  Instance: /spi_transmission_tb
+# Break in Module spi_transmission_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv line 62
+add wave -position end  sim:/spi_transmission_tb/slave/r_shift_rdy
+add wave -position 12  sim:/spi_transmission_tb/slave/r_rdy_detect
+restart -f
+run -all
+# ** Note: $stop    : D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv(62)
+#    Time: 1180 ns  Iteration: 0  Instance: /spi_transmission_tb
+# Break in Module spi_transmission_tb at D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_transmission_tb.sv line 62
+# End time: 23:46:30 on Oct 01,2021, Elapsed time: 4:32:10
+# Errors: 0, Warnings: 1
