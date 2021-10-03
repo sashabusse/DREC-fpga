@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sat Oct 02 00:23:29 2021
+Sun Oct 03 18:23:52 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,11 +17,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "spi_master:master"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 12. Port Connectivity Checks: "seven_seg:indicator"
+ 13. Port Connectivity Checks: "spi_master:master"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 02 00:23:29 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 03 18:23:52 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 164                                         ;
-;     Total combinational functions  ; 128                                         ;
+; Total logic elements               ; 163                                         ;
+;     Total combinational functions  ; 127                                         ;
 ;     Dedicated logic registers      ; 133                                         ;
 ; Total registers                    ; 133                                         ;
 ; Total pins                         ; 13                                          ;
@@ -175,6 +176,7 @@ https://fpgasoftware.intel.com/eula.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
 ; top.v                            ; yes             ; User Verilog HDL File  ; D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v        ;         ;
+; seven_seg.v                      ; yes             ; User Verilog HDL File  ; D:/dev/FPGA/DREC-fpga/homework/3_interfaces/seven_seg.v  ;         ;
 ; spi_master.v                     ; yes             ; User Verilog HDL File  ; D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_master.v ;         ;
 ; spi_slave.v                      ; yes             ; User Verilog HDL File  ; D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_slave.v  ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
@@ -185,16 +187,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 164        ;
+; Estimated Total logic elements              ; 163        ;
 ;                                             ;            ;
-; Total combinational functions               ; 128        ;
+; Total combinational functions               ; 127        ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 39         ;
+;     -- 4 input functions                    ; 38         ;
 ;     -- 3 input functions                    ; 21         ;
 ;     -- <=2 input functions                  ; 68         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 74         ;
+;     -- normal mode                          ; 73         ;
 ;     -- arithmetic mode                      ; 54         ;
 ;                                             ;            ;
 ; Total registers                             ; 133        ;
@@ -207,20 +209,21 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;            ;
 ; Maximum fan-out node                        ; div_cnt[2] ;
 ; Maximum fan-out                             ; 85         ;
-; Total fan-out                               ; 692        ;
-; Average fan-out                             ; 2.41       ;
+; Total fan-out                               ; 696        ;
+; Average fan-out                             ; 2.43       ;
 +---------------------------------------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
-; |top                       ; 128 (100)           ; 133 (95)                  ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |top                   ; top         ; work         ;
-;    |spi_master:master|     ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_master:master ; spi_master  ; work         ;
-;    |spi_slave:slave|       ; 5 (5)               ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_slave:slave   ; spi_slave   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
+; |top                       ; 127 (88)            ; 133 (83)                  ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |top                     ; top         ; work         ;
+;    |seven_seg:indicator|   ; 11 (11)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|seven_seg:indicator ; seven_seg   ; work         ;
+;    |spi_master:master|     ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_master:master   ; spi_master  ; work         ;
+;    |spi_slave:slave|       ; 5 (5)               ; 22 (22)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_slave:slave     ; spi_slave   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -244,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Clock Enable       ; 62    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -254,9 +257,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; seg_en[0]                              ; 4       ;
-; seg_en[1]                              ; 4       ;
-; seg_en[2]                              ; 4       ;
+; seven_seg:indicator|r_en[0]            ; 11      ;
+; seven_seg:indicator|r_en[1]            ; 3       ;
+; seven_seg:indicator|r_en[2]            ; 3       ;
 ; spi_master:master|tx_bits_done[3]      ; 5       ;
 ; spi_master:master|r_rdy                ; 14      ;
 ; Total number of inverted registers = 5 ;         ;
@@ -268,10 +271,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |top|seg_data[7]                    ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|spi_data[7]                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|spi_master:master|r_tx_data[7] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top|spi_tx_data[6]                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|spi_master:master|r_tx_data[4] ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 16 LEs               ; 64 LEs                 ; Yes        ; |top|seven_seg:indicator|r_data[5]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "seven_seg:indicator"  ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; i_data[29..24] ; Input ; Info     ; Stuck at VCC ;
+; i_data[21..16] ; Input ; Info     ; Stuck at VCC ;
+; i_data[31..30] ; Input ; Info     ; Stuck at GND ;
+; i_data[23..22] ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
 
 
 +----------------------------------------------------+
@@ -290,20 +305,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
 ; cycloneiii_ff         ; 133                         ;
-;     ENA               ; 54                          ;
-;     plain             ; 79                          ;
-; cycloneiii_lcell_comb ; 131                         ;
+;     ENA               ; 62                          ;
+;     plain             ; 71                          ;
+; cycloneiii_lcell_comb ; 130                         ;
 ;     arith             ; 54                          ;
 ;         2 data inputs ; 51                          ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 77                          ;
+;     normal            ; 76                          ;
 ;         1 data inputs ; 11                          ;
 ;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 18                          ;
-;         4 data inputs ; 39                          ;
+;         4 data inputs ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.17                        ;
+; Average LUT depth     ; 2.13                        ;
 +-----------------------+-----------------------------+
 
 
@@ -322,7 +337,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 02 00:23:22 2021
+    Info: Processing started: Sun Oct 03 18:23:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spi_7_seg -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -343,20 +358,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file spi_tra
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:master" File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v Line: 36
 Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:slave" File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v Line: 52
+Info (12128): Elaborating entity "seven_seg" for hierarchy "seven_seg:indicator" File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v Line: 60
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/dev/FPGA/DREC-fpga/homework/3_interfaces/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 178 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 177 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 165 logic cells
+    Info (21061): Implemented 164 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Sat Oct 02 00:23:29 2021
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Sun Oct 03 18:23:52 2021
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+

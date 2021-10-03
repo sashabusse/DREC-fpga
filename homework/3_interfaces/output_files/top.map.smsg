@@ -1,3 +1,3 @@
-Warning (10268): Verilog HDL information at top.v(90): always construct contains both blocking and non-blocking assignments File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v Line: 90
+Warning (10268): Verilog HDL information at top.v(98): always construct contains both blocking and non-blocking assignments File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v Line: 98
 Info (10281): Verilog HDL Declaration information at top.v(2): object "clk" differs only in case from object "CLK" in the same scope File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/top.v Line: 2
 Warning (10268): Verilog HDL information at spi_slave.v(42): always construct contains both blocking and non-blocking assignments File: D:/dev/FPGA/DREC-fpga/homework/3_interfaces/spi_slave.v Line: 42

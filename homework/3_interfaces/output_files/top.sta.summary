@@ -3,27 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'div_cnt[2]'
-Slack : -4.627
-TNS   : -193.320
+Slack : -4.228
+TNS   : -185.482
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.920
-TNS   : -36.961
+Slack : -2.912
+TNS   : -36.833
 
 Type  : Slow 1200mV 85C Model Setup 'spi_master:master|r_CLK'
-Slack : -1.496
-TNS   : -14.317
+Slack : -1.424
+TNS   : -14.812
 
 Type  : Slow 1200mV 85C Model Setup 'div_cnt[17]'
-Slack : -1.448
-TNS   : -11.268
+Slack : -1.314
+TNS   : -11.361
 
 Type  : Slow 1200mV 85C Model Hold 'div_cnt[2]'
-Slack : 0.452
+Slack : 0.435
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'spi_master:master|r_CLK'
-Slack : 0.453
+Slack : 0.454
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
@@ -31,7 +31,7 @@ Slack : 0.465
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'div_cnt[17]'
-Slack : 0.524
+Slack : 0.519
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -51,27 +51,27 @@ Slack : -1.487
 TNS   : -17.844
 
 Type  : Slow 1200mV 0C Model Setup 'div_cnt[2]'
-Slack : -4.282
-TNS   : -175.415
+Slack : -3.913
+TNS   : -168.263
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.462
-TNS   : -31.762
+Slack : -2.456
+TNS   : -31.666
 
 Type  : Slow 1200mV 0C Model Setup 'spi_master:master|r_CLK'
-Slack : -1.343
-TNS   : -12.041
+Slack : -1.246
+TNS   : -12.594
 
 Type  : Slow 1200mV 0C Model Setup 'div_cnt[17]'
-Slack : -1.258
-TNS   : -9.580
+Slack : -1.119
+TNS   : -9.440
 
 Type  : Slow 1200mV 0C Model Hold 'div_cnt[2]'
-Slack : 0.401
+Slack : 0.384
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'spi_master:master|r_CLK'
-Slack : 0.402
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
@@ -79,7 +79,7 @@ Slack : 0.416
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'div_cnt[17]'
-Slack : 0.484
+Slack : 0.478
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -98,28 +98,28 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'div_cnt[17]'
 Slack : -1.487
 TNS   : -17.844
 
-Type  : Fast 1200mV 0C Model Setup 'div_cnt[2]'
-Slack : -1.408
-TNS   : -46.057
-
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.230
-TNS   : -15.132
+Slack : -1.225
+TNS   : -15.052
+
+Type  : Fast 1200mV 0C Model Setup 'div_cnt[2]'
+Slack : -1.211
+TNS   : -42.832
 
 Type  : Fast 1200mV 0C Model Setup 'div_cnt[17]'
-Slack : -0.287
-TNS   : -1.435
+Slack : -0.147
+TNS   : -0.875
 
 Type  : Fast 1200mV 0C Model Setup 'spi_master:master|r_CLK'
-Slack : -0.095
-TNS   : -0.380
+Slack : -0.060
+TNS   : -0.432
 
 Type  : Fast 1200mV 0C Model Hold 'div_cnt[2]'
-Slack : 0.184
+Slack : 0.179
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'spi_master:master|r_CLK'
-Slack : 0.187
+Slack : 0.188
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
@@ -127,7 +127,7 @@ Slack : 0.193
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'div_cnt[17]'
-Slack : 0.216
+Slack : 0.213
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
